@@ -16,9 +16,9 @@ class SerpApiController extends Controller
     {
         $keyword = $request->input('keyword');
         $location = $request->input('location', 'Türkiye');
-        $apiKey = env('SERPAPI_KEY'); // .env dosyasından API anahtarını al
+        $apiKey = env('SERPAPI_KEY');
 
-        // API isteğini oluştur
+       
         $url = "https://serpapi.com/search.json?engine=google&q=" . urlencode($keyword) .
                "&location=" . urlencode($location) . "&hl=tr&gl=tr&api_key=" . $apiKey;
 
